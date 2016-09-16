@@ -1,9 +1,12 @@
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+$(window).on("load", function() {
+   $('.loader').fadeOut("fast"); 
+});
+
 $(document).ready(function() {
-    
+//    $('.loader').css('display', 'none');
 function openNav() {
-    document.getElementById("mySidenav").style.width = "12%";
-    document.getElementById("main").style.marginLeft = "12%";
+    document.getElementById("mySidenav").style.width = "13%";
+    document.getElementById("main").style.marginLeft = "13%";
     document.getElementById("menu").style.display = "none";
 
 }    
@@ -256,3 +259,4 @@ initMap();
 searching();
 displayMarkers();
 });
+

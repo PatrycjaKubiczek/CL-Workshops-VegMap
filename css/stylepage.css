@@ -8,6 +8,7 @@ body {
     min-height: 100%;
     margin: 0;
     background-color: #ffffff;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 
@@ -30,7 +31,7 @@ body {
 #container {
     z-index: 100;
     position: relative;
-    background: red;
+    background: white;
     
 /*    height: 80px;*/
 }
@@ -47,12 +48,14 @@ body {
 }
 
 /*****************footer***************/
+/*
 #containerFooter {
     z-index: 100;
     position: absolute;
     bottom: 0;
     font-family: 'Josefin Sans', sans-serif;
     background: white;
+    border: 1px solid red;
     -webkit-border-top-right-radius: 50px;
     -webkit-border-bottom-right-radius: 50px;
     -moz-border-radius-topright: 50px;
@@ -64,6 +67,8 @@ body {
     -moz-box-shadow: 9px 0px 39px -6px rgba(0,0,0,0.28);
     box-shadow: 9px 0px 39px -6px rgba(0,0,0,0.28);
 }
+*/
+/*
 .copy {
     display: inline-block;
 }
@@ -80,47 +85,9 @@ body {
     height: 15px;
     margin-left: 10px;
 }
+*/
 
-/*****************search*****************/
 
-.controls {
-    margin-top: 10px;
-    border: 1px solid black;
-    border-radius: 10px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    height: 32px;
-    outline: none;
-}
-#pac-input {
-    background-color: #fff;
-    font-family: Roboto;
-    font-size: 15px;
-    font-weight: 300;
-    margin-left: 12px;
-    padding: 0 11px 0 13px;
-    text-overflow: ellipsis;
-    width: 200px;
-}
-#pac-input:focus {
-    border-color: darkgreen;
-}
-.pac-container {
-    font-family: Roboto;
-}
-#type-selector {
-    color: #fff;
-    background-color: #4d90fe;
-    padding: 5px 11px 0px 11px;
-}
-#type-selector label {
-    font-family: Roboto;
-    font-size: 13px;
-    font-weight: 300;
-}
-#target {
-    width: 345px;
-}
 
 /*****************webiste - nav*****************/
 
@@ -133,8 +100,10 @@ li {
 nav {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.5em;
-    line-height: 60px;
+    line-height: 80px;
+/*    height: 80px;*/
     background: white;
+    border-bottom: 1px solid lightgrey;
 }
 .logo {
     display: inline-block;
@@ -160,48 +129,21 @@ a:hover {
     padding: 2px;
 }
 
-/*****************info window*****************/
-
-.firstHeading {
-    font-family: 'Josefin Sans', sans-serif;
-    border-bottom: 1px solid;
-    font-weight: 700;
-}
-#content {
-    /*    background-color: red;*/
-    /*    width: 250px;*/
-    height: 70px;
-    line-height: 1.7em;
-}
-.gm-style-iw {}
-.floatfix:after {
-    content: '';
-    display: block;
-    clear: both;
-}
 
 /*****************sidebar animated*****************/
 
 .sidenav {
     height: 100%;
-    /* 100% Full-height */
     width: 0;
-    /* 0 width - change this with JavaScript */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Stay on top */
     top: 0;
     left: 0;
     background-color: #ffffff;
     overflow-x: hidden;
-    /* Disable horizontal scroll */
     padding-top: 100px;
-    /* Place content 60px from the top */
     transition: 0.5s;
-    /* 0.5 second transition effect to slide in the sidenav */
     font-family: 'Josefin Sans', sans-serif;
-    /*    padding: 10px;*/
     border-right: 20px solid #0a8838;
     border-image: url(../images/leaf-spring-leaves-plants.jpg) 20;
     
@@ -209,18 +151,22 @@ a:hover {
 
 /* sidebar links */
 
-.sidenav a {
+.sidenav a  {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 20px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
+    color: #207D31;
+    display: block;    
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    
 }
 
 .sidenav a:hover,
 .offcanvas a:focus {
     color: #0a8838;
+    border-bottom: 2px solid #5ba90d;
 }
 
 /* closing btn */
@@ -233,20 +179,17 @@ a:hover {
     /*    margin-left: 50px;*/
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-
 #main {
     transition: margin-left .5s;
-    padding: 16px;
-    min-height: 100%;
-    background: grey;
+    padding-left: 30px;
+/*    min-height: 100%;*/
+/*    background: #E8E8E8;*/
 }
 
 #menu {
     margin: 0 50px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 
 @media screen and (max-height: 450px) {
     .sidenav {
@@ -257,40 +200,113 @@ a:hover {
     }
 }
 
-/*checkboxes*/
+h1 {
+    text-transform: uppercase;
+    text-decoration: underline;
+}
 
-.select {
+h1, h2, h3 {
+    color: #000;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+.bigcontainer{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;  
+    justify-content:center;
+}
+
+.smallcontainer {
+    width: 100%;
+}
+
+.box {
+    
+    width: 300px;
+/*    height: 200px;*/
+    border: 1px solid #fff;
+/*    padding: 5%;*/
     display: inline-block;
-    margin: 0 10px;
-}
-label {
-    margin: 10px;
-    font-size: 0.8em;
-    line-height: 80px;
-}
-input[type=checkbox] {
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-}
-input[type="checkbox"] + span {
+    vertical-align: top;
+    line-height: 20px;
+    margin: 1%;
     font-size: 1em;
-    color: black;
 }
-input[type="checkbox"]+span:before {
-    font: 16pt FontAwesome;
-    content: '\00f096';
-    display: inline-block;
-    width: 16pt;
-    padding: 2px 0 0 3px;
-    margin-right: 0.5em;
+
+/*
+.box > img {
+    height: 200px;
+    width: 200px;   
 }
-input[type="checkbox"]:checked+span:before {
-    content: '\00f046';
+*/
+
+.crop {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  overflow: hidden;
+  border: 1px solid #E8E8E8;
 }
-input[type="checkbox"]:focus+span:before {
-    outline: 1px dotted #aaa;
+
+.crop img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: auto;
+  width: 100%;
+
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+  opacity: 1;
+  
 }
-input[type="checkbox"]+span:hover:before {
-    text-shadow: 0 1px 1px grey;
+.crop img:hover {
+  opacity: 0.5;
+  transition: ease-in-out 1s;
 }
+
+
+.place-desc {
+    padding-top: 10px;
+    line-height: 30px;
+}
+
+
+hr {
+/*
+    height: 1px;
+    background: #333;
+*/
+    border-top: 1px solid #E8E8E8;
+}
+.about-desc {
+    overflow: hidden;
+    font-size:1.2em;
+}
+
+.about-img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    float: left;
+    margin: 10px;
+}
+
+.why-text{
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 50px;
+}
+
+.why-text img{
+    width: 30px;
+    height: 30px;
+}
+
+
+
